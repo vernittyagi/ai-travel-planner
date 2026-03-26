@@ -3,6 +3,7 @@ const router = express.Router();
 import tripUtils  from '../controllers/iteneraryController.js';
 
 router.post("/itinerary", tripUtils.generateItinerary);
-router.get("/trips", tripUtils.getTrips)
+router.get("/trip/:slug", tripUtils.getTrip)
+router.get("/trips", tripUtils.getRecentTrips)
 
 export default router

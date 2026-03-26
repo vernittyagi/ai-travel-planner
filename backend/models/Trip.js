@@ -1,22 +1,29 @@
 import mongoose from "mongoose";
 
 const tripSchema = mongoose.Schema({
+    slug: {
+        type: String,
+        unique: true
+    },
+    image: {
+        type: String,
+    },
     destination: {
         type: String,
         required : true
     },
     days: {
-        type: Number,
+        type: Object,
         required : true
     },
     budget: {
-        type: String,
+        type: Object,
     },
     interests: {
         type: String,
     },
     itinerary: {
-        type: String,
+        type: mongoose.Schema.Types.Mixed,
     },
     createdAt: {
         type: Date,
