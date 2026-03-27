@@ -50,7 +50,7 @@ const MyTrip = () => {
 
     return (
         <>
-            <div className='relative md:rounded-2xl overflow-hidden shadow-lg'>
+            <div className='relative md:rounded-2xl overflow-hidden shadow-lg mt-4'>
                 <img src={trip.image} className='w-full h-85 object-cover' />
                 {/* overlay */}
                 <div className='absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-white text-center'>
