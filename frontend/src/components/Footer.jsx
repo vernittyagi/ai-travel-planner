@@ -5,7 +5,7 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
     return (
         <>
-            <div className='flex max-md:flex-col gap-10 justify-around items-center mt-20 w-full mb-10'>
+            <div className='flex max-md:flex-col gap-10 justify-around items-center  w-full p-4'>
                 <div className='flex gap-4'>
                     <span className='text-6xl rounded-xl font-bold shadow'>🚞</span>
                     <div className='flex flex-col gap-2'>

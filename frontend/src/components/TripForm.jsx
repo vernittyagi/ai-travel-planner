@@ -43,7 +43,7 @@ const TripForm = () => {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='flex max-md:flex-col gap-4 justify-center items-center text-gray-500'>
+    <form onSubmit={handleSubmit(onSubmit)} className='flex max-md:flex-col gap-4 justify-center items-center text-gray-500 mt-5'>
       <div className='relative'>
         <input className='bg-gray-200 p-3 rounded-md max-md:w-[90vw]' {...register("destination", {required: true})} placeholder='Destination' />
         {suggestions?.length > 0 && (
