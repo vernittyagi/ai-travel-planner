@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-    baseURL: 'https://backend-chat-app-di8u.onrender.com/api'
+    baseURL: 'https://backend-chat-app-di8u.onrender.com:3000/api'
 })
 
 export const generateTrip = (data) => {
