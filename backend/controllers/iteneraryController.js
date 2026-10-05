@@ -67,7 +67,6 @@ I should not face parsing issues in your response.
                 }
             ],
             model: 'openai/gpt-oss-120b',
-            response_format: { type: "json_object" },
         });
         const image = await getPlaceImage(destination)
         let itinerary = completion.choices[0].message.content
