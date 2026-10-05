@@ -66,7 +66,8 @@ I should not face parsing issues in your response.
                     content: prompt
                 }
             ],
-            model: 'llama-3.1-8b-instant'
+            model: 'llama-3.1-8b-instant',
+            response_format: { type: "json_object" },
         });
         const image = await getPlaceImage(destination)
         let itinerary = completion.choices[0].message.content
