@@ -66,7 +66,7 @@ I should not face parsing issues in your response.
                     content: prompt
                 }
             ],
-            model: 'llama-3.1-8b-instant',
+            model: 'llama-3.3-70b-specdec',
             response_format: { type: "json_object" },
         });
         const image = await getPlaceImage(destination)
