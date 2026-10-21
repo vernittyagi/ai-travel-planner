@@ -30,4 +30,13 @@ jobs:
           docker build -t vernittyagi/travel-frontend:latest ./frontend
           
       # Add your cloud deployment hook below (AWS EC2 SSH, EKS, or DigitalOcean droplet)
+      # ⚙️ STEP 1: TRIGGER BACKEND CONTAINER DEPLOYMENT ON RENDER
+      - name: Deploy Backend Container to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_BACKEND_HOOK_URL }}"
+
+      # 💻 STEP 2: TRIGGER FRONTEND NGInX CONTAINER DEPLOYMENT ON RENDER
+      - name: Deploy Frontend Container to Render
+        run: |
+          curl -X POST "${{ secrets.RENDER_FRONTEND_HOOK_URL }}"
 
