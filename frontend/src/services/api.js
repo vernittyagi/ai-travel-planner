@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // baseURL: 'https://backend-chat-app-di8u.onrender.com/api'
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL
+    baseURL: import.meta.env.VITE_API_BASE_URL || 'https://ai-travel-planner-backend-s8nh.onrender.com/api'
 })
 
 export const generateTrip = (data) => {
