@@ -1,0 +1,33 @@
+name: CI/CD Pipeline - PlanGo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  audit-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node_version: '20'
+          cache: 'npm'
+          cache-dependency-path: './backend/package-lock.json'
+
+      - name: Audit Backend Dependencies
+        run: |
+          cd backend
+          npm ci
+          # Add your testing suites or syntax checkers here (e.g., npm run lint)
+
+      - name: Build Docker Container Images
+        run: |
+          docker build -t vernittyagi/travel-backend:latest ./backend
+          docker build -t vernittyagi/travel-frontend:latest ./frontend
+          
+      # Add your cloud deployment hook below (AWS EC2 SSH, EKS, or DigitalOcean droplet)
+
