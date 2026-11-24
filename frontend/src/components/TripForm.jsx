@@ -13,7 +13,6 @@ const TripForm = () => {
   const dropdownContainerRef = useRef(null);
 
   const API_KEY = import.meta.env.VITE_GEOAPIFY_API_KEY.trim();
-  let mainPlace = ""
 
   const {
     register,
